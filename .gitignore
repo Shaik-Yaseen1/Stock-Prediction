@@ -1,0 +1,55 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Virtual Environment
+.venv/
+venv/
+env/
+
+# Environment variables
+.env
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Build files
+build/
+dist/
+*.egg-info/
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# VS Code
+.vscode/
+
+# PyCharm
+.idea/
+
+# Model files
+*.joblib
+*.eqx
+
+# Cache
+.cache/
+
+# Render
+.render/
+
+# Node modules (if frontend exists)
+node_modules/
+
+# React/Vite build
+frontend/dist/
+frontend/node_modules/
+
+# Temporary files
+temp/
+tmp/
