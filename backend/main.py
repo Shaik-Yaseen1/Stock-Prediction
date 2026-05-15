@@ -10,7 +10,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import FileResponse
 from pydantic import BaseModel, Field
 
-from model_lstm import (
+from .model_lstm import (
     SEQUENCE_LENGTH,
     load_bundle,
     one_step_on_history,
