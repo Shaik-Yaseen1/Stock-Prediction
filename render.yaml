@@ -1,0 +1,14 @@
+# Render Blueprint: connect repo at https://dashboard.render.com
+# New → Blueprint → select this GitHub repo
+services:
+  - type: web
+    name: stock-lstm-forecast
+    runtime: python
+    rootDir: backend
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /api/health
+    envVars:
+      - key: PYTHON_VERSION
+        value: "3.13.0"
