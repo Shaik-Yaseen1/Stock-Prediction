@@ -1,6 +1,6 @@
 # LSTM Stock & Crypto Forecast
 
-End-to-end web app that downloads historical market data, trains a stacked **LSTM** on daily adjusted closes, and projects a short price horizon. Built for **learning and prototyping** — not financial advice or live trading.
+End-to-end web app that downloads historical market data, trains a stacked **LSTM** on daily adjusted closes, and projects a short price horizon. Built for **learning and prototyping** — not financial advice.
 
 ![Python](https://img.shields.io/badge/Python-3.13-blue)
 ![FastAPI](https://img.shields.io/badge/FastAPI-0.115-green)
@@ -32,7 +32,7 @@ End-to-end web app that downloads historical market data, trains a stacked **LST
 ## Project structure
 
 ```
-Stock Prediction/
+Stock-Analysis-Platform/
 ├── backend/
 │   ├── main.py           # FastAPI routes & data fetch
 │   ├── model_lstm.py     # Stacked LSTM (60-day sequences)
@@ -60,8 +60,8 @@ Stock Prediction/
 ### 1. Clone and create a virtual environment
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/YOUR_REPO.git
-cd "Stock Prediction"
+git clone https://github.com/Shaik-Yaseen1/Stock-Analysis-Platform.git
+cd Stock-Analysis-Platform
 
 python3.13 -m venv .venv313
 source .venv313/bin/activate   # Windows: .venv313\Scripts\activate
@@ -105,7 +105,7 @@ uvicorn main:app --reload --host 127.0.0.1 --port 8000 --app-dir backend
 | `BTC-USD` | Bitcoin vs USD |
 | `ETH-USD` | Ethereum vs USD |
 
-Use Yahoo’s `-USD` suffix for crypto (not plain `BTC`).
+Use Yahoo's `-USD` suffix for crypto (not plain `BTC`).
 
 ---
 
@@ -150,7 +150,7 @@ curl -X POST http://127.0.0.1:8000/api/predict \
 | Build Command | `pip install -r requirements.txt` |
 | Start Command | `uvicorn main:app --host 0.0.0.0 --port $PORT` |
 
-> **Note:** On Render’s free tier, services sleep when idle and long training requests may time out. Use fewer epochs for demos or run training locally.
+> **Note:** On Render's free tier, services sleep when idle and long training requests may time out. Use fewer epochs for demos or run training locally.
 
 ---
 
